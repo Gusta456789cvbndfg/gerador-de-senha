@@ -25,6 +25,12 @@ const checkbox = document.querySelectorAll('.checkbox');
 const forcaSenha = document.querySelector('.forca');
 
 botoes[0].onclick = diminuiTamanho;
+    let senha = '';
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
 botoes[1].onclick = aumentaTamanho;
 	
 9 months ago
@@ -105,6 +111,12 @@ function classificaSenha(tamanhoAlfabeto){
 9 months agoconst numeroSenha = document.querySelector('.parametro-senha__texto');
 let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
+    let senha = '';
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVXYWZ';
 const letrasMinusculas = 'abcdefghijklmnopqrstuvxywz';
 const numeros = '0123456789';
@@ -122,7 +134,8 @@ style.css
 
 function diminuiTamanho() {
     if (tamanhoSenha > 1) {
-        // tamanhoSenha = tamanhoSenha-1;
+        // tamanhoSenha = tamanho
+Senha-1;
         tamanhoSenha--;
     }
     numeroSenha.textContent = tamanhoSenha;
@@ -202,6 +215,7 @@ function diminuiTamanho() {
     numeroSenha.textContent = tamanhoSenha;
     geraSenha();	
     9 months ago
+
     style.css
     
 }
@@ -214,6 +228,12 @@ function aumentaTamanho() {
     geraSenha();
 }
 
+    let senha = '';
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
 for (i = 0; i < checkbox.length; i++) {
     checkbox[i].onclick = geraSenha;
 }
@@ -259,6 +279,8 @@ function classificaSenha(tamanhoAlfabeto){
     const valorEntropia = document.querySelector('.entropia');
     valorEntropia.textContent = "Um computador pode levar até " + Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir essa senha.";
 }
+
+
 
 
 

@@ -33,7 +33,10 @@ body{
 
 .conteudo-titulo{
     text-align: center;
-    margin-top: 80px;
+    margin-top:
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px; 80px;
 }
 
 .conteudo-senha{
@@ -46,18 +49,45 @@ body{
 #campo-senha{
     background-color: var(--fundo-senha);
     border: none;
-    color: var(--branco);
-    font-family: var(--roboto-mono);
-    font-size: 40px;
-    width: 70%;
-}
+    color: var(--bran
 
+    font-family: var(--roboto-mono);
+    .parametro-coluna__senha{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .parametro-senha{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    font-size: 40px;
+    width: 70%;co);
+font-family: var(--roboto-mono);
+font-size: 40px;
+width: 70%;
+
+
+background-color: var(--fundo-texto);
+border: 2px solid var(--borda);
+margin-top: 32px;
 #campo-senha:focus{
     outline: none;
 }
 
 .conteudo{
     max-width: 1200px;
+    margin: 0 auto;
+}
+
+.parametro-coluna__senha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.parametro-senha{
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -103,6 +133,12 @@ body{
 .parametro-senha__texto{
     padding: 24px;
     border-top: 2px solid var(--borda);
+    let senha = '';
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
     border-bottom: 2px solid var(--borda);
     margin: 0;
     font-size: 24px;<
@@ -124,6 +160,12 @@ label{
     width: 100%;
 }
 .forca{
+    let senha = '';
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
     height: 30px;
     position: relative;
     bottom: 30px;
@@ -142,6 +184,12 @@ label{
 }
 
 .parametro-senha-textos{
+    let senha = '';
+    for (let i = 0; i < tamanhoSenha; i++) {
+        let numeroAleatorio = Math.random() * alfabeto.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + alfabeto[numeroAleatorio];
+    }
     display: flex;
     justify-content: space-between;
 }
@@ -152,3 +200,6 @@ label{
         flex-direction: row;
     }
 }
+font-family: var(--roboto-mono);
+font-size: 40px;
+width: 70%;
